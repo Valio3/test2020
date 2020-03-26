@@ -1,0 +1,16 @@
+import random
+import time
+import sys
+random.seed(3)
+sort = str(input("What do you want to sort by? (name, gender or activity)"))
+
+t1 = time.time()
+
+list = []
+for line in open('test'):
+    items = line.rstrip('\r\n').split(',')
+    items.append(" ")
+    list.append(items)
+if not list:
+    print("List is empty")
+    sys.exit()
